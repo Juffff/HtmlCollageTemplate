@@ -12,12 +12,18 @@
             <span class="brands">BRANDS</span><span class="outlet">OUTLET</span>
         </div>
 
+        <div class="priceblock">
+            <span class="parameter lineName listPrice" id="list">6000</span>
+            <span class="parameter lineName netPrice" id="net">2375</span><br>
+            <div class="strike" id="strike1"></div>
+            <div class="strike" id="strike2"></div>
+
+        </div>
+
         <div class="text">
             <span class="lineName">Бренд:&#9</span><span class="parameter lineName">Bugatti</span><br>
             <span class="lineName">Цвет:&#9</span><span class="parameter lineName">White</span><br>
-            <span class="lineName">Размер:&#9</span><span class="parameter lineName">45</span><br>
-<!--            <span class="lineName listPrice">Розница:</span><span class="parameter lineName listPrice">6000</span><br>-->
-            <span class="lineName netPrice">Цена:&#9</span><span class="parameter lineName netPrice">2375</span><br>
+            <span class="lineName">Доступные размеры:&#9</span><br><span class="parameter lineName">45</span><br>
         </div>
 
 
@@ -32,13 +38,12 @@
 
 <style>
 
-    body {
-        background-color: black;
-    }
 
     .container {
-        width: 800px;
-        height: 1000px;
+        width: 797px;
+        height: 968px;
+        background-color: black;
+        border-radius: 10px;
     }
 
     .description {
@@ -49,8 +54,8 @@
         float: left;
 
     }
-    
-    .logo{
+
+    .logo {
         float: right;
         color: white;
         font-family: Impact, sans-serif;
@@ -59,12 +64,18 @@
         margin-right: 10px;
     }
 
-    .brands{
+    .brands {
         color: red;
     }
 
-    .outlet{
+    .outlet {
         color: white;
+    }
+
+    .priceblock {
+        position: absolute;
+        left: 590px;
+        top: 78px;
     }
 
     .item {
@@ -86,6 +97,40 @@
 
     .listPrice {
         color: red;
+    / / text-decoration: line-through;
+    }
+
+    #list {
+        position: relative;
+        left: -98px;
+        top: 10px;
+        font-size: 3em;
+    }
+
+    #net {
+        font-size: 4em;
+        position: absolute;
+        left: 55px;
+    }
+
+    .strike {
+        background-color: red;
+        width: 165px;
+        height: 2px;
+        position: absolute;
+        z-index: 0;
+    }
+
+    #strike1 {
+        transform: rotate(-15deg);
+        left: -115px;
+        top: 38px;
+    }
+
+    #strike2 {
+        transform: rotate(15deg);
+        left: -115px;
+        top: 38px;
     }
 
     .netPrice {
